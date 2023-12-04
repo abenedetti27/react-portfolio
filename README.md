@@ -34,75 +34,8 @@ THEN I am presented with text or icon links to the developer’s GitHub and Link
 
 ![Screenshot of Web application](image.png)
 
-Code Snippet of workbox plug-ins for service worker file
+Code Snippet
 ```
-module.exports = () => {
-  return {
-    mode: 'development',
-    entry: {
-      main: './src/js/index.js',
-      install: './src/js/install.js'
-    },
-    output: {
-      filename: '[name].bundle.js',
-      path: path.resolve(__dirname, 'dist'),
-    },
-    plugins: [
-      new HtmlWebpackPlugin({
-        template: './index.html',
-        title: 'Text Editor'
-      }),
-      new WebpackPwaManifest({
-        name: 'Text Editor',
-        short_name: 'Text Editor',
-        description: 'A simple text editor',
-        background_color: '#ffffff',
-        crossorigin: 'use-credentials', 
-        icons: [
-          {
-            src: path.resolve('./src/images/logo.png'),
-            sizes: [96, 128, 192, 256, 384, 512] 
-          },
-          {
-            src: path.resolve('./src/images/logo.png'),
-            size: '1024x1024' 
-          },
-          {
-            src: path.resolve('./favicon.ico'),
-            size: '1024x1024',
-            purpose: 'maskable'
-          }
-        ]
-      }),
-      new InjectManifest({
-        swSrc: './src-sw.js',
-        swDest: 'src-sw.js'
-      })
-    ],
-
-    module: {
-      rules: [
-        {
-          test: /\.css$/,
-          use: ['style-loader', 'css-loader']
-        },
-        { 
-          test: /\.js$/, 
-          exclude: /node_modules/, 
-          use: { 
-            loader: 'babel-loader', 
-            options: {
-              presets: ["@babel/preset-env"],
-              plugins: ["@babel/plugin-proposal-object-rest-spread", "@babel/transform-runtime"],
-
-            },
-          },   
-        },
-      ],
-    },
-  };
-};
-
 ```
 
 ## Usage <a name="usage"></a>
