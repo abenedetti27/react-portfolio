@@ -14,20 +14,13 @@ This is a single page application portfolio containing my web development projec
 - [Questions](#questions)
 
 ## Installation <a name="installation"></a>
-When the users loads the portfolio, they are presented with a page containing a header, section for content, and a footer. When the user views the hearer, they are presented with my name and navigation with titles corresponding to different sections of the portfolio
+When the users loads the portfolio, they are presented with a page containing a header, section for content, and a footer. When the user views the hearer, they are presented with my name and navigation with titles corresponding to different sections of the portfolio.
 
-WHEN I view the header
-THEN I am presented with the developer's name and navigation with titles corresponding to different sections of the portfolio
-WHEN I view the navigation titles
-THEN I am presented with the titles About Me, Portfolio, Contact, and Resume, and the title corresponding to the current section is highlighted
-WHEN I click on a navigation title
-THEN I am presented with the corresponding section below the navigation without the page reloading and that title is highlighted
-WHEN I load the portfolio the first time
-THEN the About Me title and section are selected by default
-WHEN I am presented with the About Me section
-THEN I see a recent photo or avatar of the developer and a short bio about them
-WHEN I am presented with the Portfolio section
-THEN I see titled images of six of the developer’s applications with links to both the deployed applications and the corresponding GitHub repository
+The navigation titles the user is presented with are About Me, Portfolio, Contact, and Resume, and the title corresponding to the current section is highlighted. When the user clicks on a navigation title, they are presented with the corresponding section below the navigation without the page reloading and that title is highlighted.
+
+When the portfolio is loaded the first time, the About Me title and section are selected by default. The About Me section contains a recent photo and a short bio. Th Portfolio section contains titles and images of six applications with links to the deployed application and the corresponding GitHub repository. 
+
+
 WHEN I am presented with the Contact section
 THEN I see a contact form with fields for a name, an email address, and a message
 WHEN I move my cursor out of one of the form fields without entering text
